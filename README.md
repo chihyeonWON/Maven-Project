@@ -25,7 +25,7 @@ GroupId, Artifact Id, Version, Package는 다음과 같이 입력한다.
 
 ## 메이븐 프로젝트 생성시 오류와 해결방법
 
-![image](https://user-images.githubusercontent.com/58906858/180588042-a95b242e-10d4-418a-8094-5c0a9cffd5c9.png)
+![image](https://user-images.githubusercontent.com/58906858/180588063-3f712923-7e05-43c9-927b-e86ade529498.png)
 
 메이븐 프로젝트 생성 시 다음과 같은 오류가 발생한다면 워크스페이스 아래에 pom.xml 파일이 있는 지 확인해봐야한다.
 Are you running the command from a directory that has an existing pom.xml file in it? I think that may be confusing Maven, as it thinks you're trying to add your new project as a sub-module of the project in the working directory.

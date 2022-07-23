@@ -22,4 +22,14 @@ GroupId, Artifact Id, Version, Package는 다음과 같이 입력한다.
 
 생성된 프로젝트의 구조는 다음과 같다.
 ![image](https://user-images.githubusercontent.com/58906858/180374807-b67ac0fa-5272-43d5-b5c4-f4fbae792553.png)
-  
+
+## 메이븐 프로젝트 생성시 오류와 해결방법
+
+![image](https://user-images.githubusercontent.com/58906858/180588042-a95b242e-10d4-418a-8094-5c0a9cffd5c9.png)
+
+메이븐 프로젝트 생성 시 다음과 같은 오류가 발생한다면 워크스페이스 아래에 pom.xml 파일이 있는 지 확인해봐야한다.
+Are you running the command from a directory that has an existing pom.xml file in it? I think that may be confusing Maven, as it thinks you're trying to add your new project as a sub-module of the project in the working directory.
+기존 pom.xml 파일이 있는 디렉토리에서 명령을 실행하고 있습니까? 메이븐이 새 프로젝트를 작업 디렉터리에 있는 프로젝트의 하위 모듈로 추가하려고 한다고 생각하기 때문에 혼란스러울 수 있다고 생각합니다.
+알고 보니 워크스페이스 아래에 POM 파일을 두었는데, 이것이 M2일식 플러그인에 대한 오해의 원인이 되었습니다. 삭제하면 됩니다.
+
+이런 답변을 얻었고 워크스페이스 파일에 pom.xml 파일이 있던 나는 pom.xml 파일을 삭제하자 정상적으로 프로젝트가 생성되었다.
